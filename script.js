@@ -143,6 +143,18 @@ class LinkedList {
         node.next = nodeNext;
         this.volume++;
     }
+
+    // Removes a node at the given index
+    removeAt(index) {
+        let current = this.head;
+
+        for (let i = 0; i < (index - 1); i++) {
+            current = current.next;
+        }
+
+        current.next = current.next.next;
+        this.volume--;
+    }
 }
 
 // Creates the node class
