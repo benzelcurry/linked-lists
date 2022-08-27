@@ -70,6 +70,18 @@ class LinkedList {
 
         return current;
     }
+
+    // Removes the last node from the list
+    pop() {
+        let current = this.head;
+
+        while (current.next.next) {
+            current = current.next;
+        }
+
+        current.next = null;
+        this.volume--;
+    }
 }
 
 // Creates the node class
