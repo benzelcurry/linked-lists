@@ -82,6 +82,22 @@ class LinkedList {
         current.next = null;
         this.volume--;
     }
+
+    // Returns true/false if given value is found in the list
+    contains(value) {
+        let current = this.head;
+        let result = false;
+
+        while (current.next) {
+            if (current.value === value) {
+                result = true;
+            }
+
+            current = current.next;
+        }
+
+        return result;
+    }
 }
 
 // Creates the node class
@@ -93,5 +109,9 @@ class Node {
 }
 
 let list = new LinkedList();
+list.append(50);
+list.append(100);
+list.append(200);
+list.append(400);
 
 console.log(list);
