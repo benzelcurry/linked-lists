@@ -128,6 +128,21 @@ class LinkedList {
 
         return output;
     }
+
+    // Inserts a new node at the given index
+    insertAt(value, index) {
+        let current = this.head;
+        let node = new Node(value);
+
+        for (let i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        let nodeNext = current.next;
+        current.next = node;
+        node.next = nodeNext;
+        this.volume++;
+    }
 }
 
 // Creates the node class
