@@ -43,6 +43,11 @@ class LinkedList {
     size() {
         return this.volume;
     }
+
+    // Returns the head of the list
+    first() {
+        return this.head;
+    }
 }
 
 // Creates the node class
