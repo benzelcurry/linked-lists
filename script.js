@@ -48,6 +48,17 @@ class LinkedList {
     first() {
         return this.head;
     }
+
+    // Returns the tail of the list
+    tail() {
+        let current = this.head;
+
+        while (current.next) {
+            current = current.next;
+        }
+
+        return current;
+    }
 }
 
 // Creates the node class
