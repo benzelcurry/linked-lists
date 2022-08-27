@@ -98,6 +98,21 @@ class LinkedList {
 
         return result;
     }
+
+    // Returns the index of the node containing a given value if it's found in list
+    find(value) {
+        let current = this.head;
+        let result = 0;
+
+        while (current) {
+            if (current.value === value) {
+                return result;
+            }
+
+            current = current.next;
+            result++;
+        }
+    }
 }
 
 // Creates the node class
