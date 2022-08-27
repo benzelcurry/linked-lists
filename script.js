@@ -113,6 +113,21 @@ class LinkedList {
             result++;
         }
     }
+
+    // Returns the list as a string
+    toString() {
+        let current = this.head;
+        let output = '';
+
+        while (current) {
+            output += `( ${current.value} ) -> `;
+            current = current.next;
+        }
+
+        output += 'null';
+
+        return output;
+    }
 }
 
 // Creates the node class
