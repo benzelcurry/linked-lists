@@ -59,6 +59,17 @@ class LinkedList {
 
         return current;
     }
+
+    // Returns the node at a given index
+    at(index) {
+        let current = this.head;
+
+        for (let i = 0; i < index; i++) {
+            current = current.next;
+        }
+
+        return current;
+    }
 }
 
 // Creates the node class
