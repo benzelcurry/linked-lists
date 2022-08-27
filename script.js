@@ -2,7 +2,7 @@
 class LinkedList {
     constructor(head = null) {
         this.head = head;
-        this.size = 0;
+        this.volume = 0;
     }
 
     // Append node to end of list
@@ -23,7 +23,7 @@ class LinkedList {
             current.next = node;
         }
 
-        this.size++;
+        this.volume++;
     }
 
     // Add node to beginning of list
@@ -36,7 +36,12 @@ class LinkedList {
 
         this.head = node;
 
-        this.size++;
+        this.volume++;
+    }
+
+    // Returns the current size of the list
+    size() {
+        return this.volume;
     }
 }
 
